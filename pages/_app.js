@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../styles/globals.css'
 import Header from './components/header';
-import Todo from './components/todo';
+import Head from 'next/head';
 import Board from './components/todoBoard';
 
 
@@ -21,20 +21,25 @@ function MyApp({ Component, pageProps }) {
       alert("type your task!!")
     } else {
       setTaskList([...taskList, userInput])
-
+      setUserInput('');
     }
   }
 
 
 
+
+
+
   return (
     <div>
-
+      <Head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+      </Head>
       <Header />
       <Board taskList={taskList}/>
       <div id='inputDiv'>
         <input id='userinput' onChange={getInput} value={userInput}></input>
-        <button id='sumitButton' onClick={addTask}>SUMIT!</button>
+        <button id='sumitButton' className='material-symbols-outlined' onClick={addTask}>arrow_upward</button>
       </div>
     </div>
   );
