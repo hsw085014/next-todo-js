@@ -19,7 +19,7 @@ html {
 
 #header {
   text-align: center;
-  color: red;
+  color: rgb(217, 255, 0);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -88,4 +88,6 @@ html {
 
 #board {
   margin-bottom: 90px;
+  display: flex;
+  justify-content: center;
 }

@@ -3,7 +3,7 @@ const Header = () => {
     return (
         <div id="header">
             <h1>
-                파멸의 todolist
+                TODO
             </h1>
         </div>
     )
