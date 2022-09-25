@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import '../styles/globals.css'
 import Header from './components/header';
-import Head from 'next/head';
 import Board from './components/todoBoard';
-
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
 
@@ -14,8 +13,6 @@ function MyApp({ Component, pageProps }) {
     setUserInput(userInput.target.value)
   }
 
-
-
   const addTask = () => {
     if(userInput == "") {
       alert("type your task!!")
@@ -25,15 +22,10 @@ function MyApp({ Component, pageProps }) {
     }
   }
 
-
-
-
-
-
   return (
     <div>
       <Head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> 
       </Head>
       <Header />
       <Board taskList={taskList}/>
@@ -45,4 +37,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp
+export default MyApp;
